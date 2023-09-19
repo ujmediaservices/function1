@@ -35,7 +35,7 @@ namespace function1
                     ? "The Feature Flag 'feature1' is turned ON"
                     : "The Feature Flag 'feature1' is turned OFF";
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(message);
         }
     }
 }
