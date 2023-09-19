@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 
 namespace function1
 {
-    public static class Function1
+    public class Function1
     {
         private readonly IFeatureManagerSnapshot _featureManagerSnapshot;
         private readonly IConfigurationRefresher _configurationRefresher;
@@ -25,7 +25,7 @@ namespace function1
         }
         
         [FunctionName("Function1")]
-        public static async Task<IActionResult> Run(
+        public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
