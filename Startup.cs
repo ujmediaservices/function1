@@ -21,6 +21,8 @@ namespace FunctionApp
 
         public override void Configure(IFunctionsHostBuilder builder)
         {
+            builder.Services.AddAzureAppConfiguration();
+            builder.Services.AddFeatureManagement();        
         }
     }
 }
